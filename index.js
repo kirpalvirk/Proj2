@@ -42,7 +42,7 @@ const movieSchema = new mongoose.Schema({
   const express = require("express");
 const app = express();
 
-app.get("/home1", (req, res) => {
+app.get("/home", (req, res) => {
   Movie.find({}, (error, movies) => {
     if (error) {
       console.error(error);
@@ -52,14 +52,14 @@ app.get("/home1", (req, res) => {
   });
 });
 
-app.get('/home', function(req, res) { 
-  // let sql = "SELECT * FROM country";     
-  // connection.query(function(err, results){
-  //     if (err) throw err;
-      // res.send(results);
-      res.render('home');
-  // });
-});
+// app.get('/home', function(req, res) { 
+//   // let sql = "SELECT * FROM country";     
+//   // connection.query(function(err, results){
+//   //     if (err) throw err;
+//       // res.send(results);
+//       res.render('home');
+//   // });
+// });
 
 app.set('view engine', 'ejs');
 
