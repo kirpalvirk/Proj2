@@ -1,8 +1,11 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1:27017/movies", {
+// "mongodb://127.0.0.1:27017/movies"
+
+mongoose.connect("mongodb+srv://kirpalvirk:Kirpal%40123@senecaweb.jo49cll.mongodb.net/?retryWrites=true&w=majority", {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  // useFindAndModify: true 
 });
 
 const db = mongoose.connection;
