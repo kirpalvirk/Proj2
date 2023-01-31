@@ -52,23 +52,22 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get('/home', function(req, res) { 
+  // let sql = "SELECT * FROM country";     
+  // connection.query(function(err, results){
+  //     if (err) throw err;
+      // res.send(results);
+      res.render('home');
+  // });
+});
+
 app.set('view engine', 'ejs');
 
 app.listen(8081, () => {
   console.log("Movie app listening on port 3000!");
 });
 
-// var http = require("http");
 
-// http.createServer(function (request, response) {
-//    // Send the HTTP header 
-//    // HTTP Status: 200 : OK
-//    // Content Type: text/plain
-//    response.writeHead(200, {'Content-Type': 'text/plain'});
-   
-//    // Send the response body as "Hello World"
-//    response.end('Hello World\n');
-// }).listen(8081);
 
 // // Console will print the message
 // console.log('Server running at http://127.0.0.1:8081/');
