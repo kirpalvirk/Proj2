@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1/movies", {
+mongoose.connect("mongodb://0.0.0.0/movies", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -63,7 +63,7 @@ app.get("/add_movie", (req, res) => {
 
 app.set('view engine', 'ejs');
 
-app.listen(8081, () => {
+app.listen(3000, () => {
   console.log("Movie app listening on port 3000!");
 });
 
