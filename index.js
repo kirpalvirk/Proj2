@@ -42,7 +42,7 @@ const movieSchema = new mongoose.Schema({
   const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/movie", (req, res) => {
   Movie.find({}, (error, movies) => {
     if (error) {
       console.error(error);
