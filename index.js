@@ -54,7 +54,7 @@ app.get("/", (req, res) => {
 
 app.set('view engine', 'ejs');
 
-app.listen(3000, () => {
+app.listen(4000, () => {
   console.log("Movie app listening on port 3000!");
 });
 
