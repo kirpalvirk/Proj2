@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://0.0.0.0/movies", {
+mongoose.connect("mongodb://127.0.0.1:27017/movies", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
 
 const db = mongoose.connection;
 
-db.on("error", console.error.bind(console, "connection error:"));
+db.on("error", console.error.bind(console, "This is thee connection error:"));
 
 db.once("open", function() {
   console.log("Connected to MongoDB");
@@ -64,7 +64,7 @@ app.get("/add_movie", (req, res) => {
 app.set('view engine', 'ejs');
 
 app.listen(3000, () => {
-  console.log("Movie app listening on port 3000!");
+  console.log("My Movie app listening on port 3000!");
 });
 
 
